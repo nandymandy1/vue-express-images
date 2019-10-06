@@ -1,0 +1,34 @@
+{
+  "name": "vue-express-images",
+  "version": "1.0.0",
+  "description": "Simple application to hanlde image uploads using vue.js and express",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "node-install": "npm install && cd frontend && npm install",
+    "prepare-app": "cd frontend && npm run build && mv dist ../ && cd .. && mv dist public && cd public && mkdir uploads",
+    "remove-dist": "rm -r public",
+    "reset-app": "rm -r public && npm run prepare-app",
+    "frontend": "cd frontend && npm run serve",
+    "git-reset": "rm -r -f .git && rm -r .gitignore",
+    "git-prepare": "npm run g-init && npm run g-ignore && npm run g-ignored",
+    "g-init": "git init",
+    "g-ignore": "touch .gitignore",
+    "g-ignored": "echo \"node_modules\">> .gitignore && echo \"/frontend/node_modules\" >> .gitignore"
+  },
+  "keywords": [
+    "Image",
+    "Uploads"
+  ],
+  "author": "Narendra Maurya",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.7.3",
+    "mongoose-paginate-v2": "^1.3.1",
+    "multer": "^1.4.2"
+  }
+}
