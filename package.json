@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
     "node-install": "npm install && cd frontend && npm install",
-    "prepare-app": "cd frontend && npm run build && mv dist ../ && cd .. && mv dist public && cd public && mkdir uploads",
+    "prepare-app": "cd frontend && npm run build && mv dist ../ && cd .. && mv dist public && cd public && mkdir uploads && touch .gitkeep",
     "remove-dist": "rm -r public",
     "reset-app": "rm -r public && npm run prepare-app",
     "frontend": "cd frontend && npm run serve",
